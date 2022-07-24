@@ -36,15 +36,15 @@ export default function Diet({diets}:any){
                 </form>
             </div>
 
-            <div>
+            <div className='btn-diet-workouts'>
             <Link href="Diet/breakfast">
-            <button>Breakfast</button>
+            <button className='custom-btn btn-16'>Breakfast</button>
              </Link>
              <Link href="Diet/lunch">
-            <button>Lunch</button>
+            <button className='custom-btn btn-16'>Lunch</button>
              </Link>
              <Link href="Diet/dinner">
-            <button>Dinner</button>
+            <button className='custom-btn btn-16'>Dinner</button>
              </Link>
 
             </div>
