@@ -26,8 +26,6 @@ export default function Diet({diets}:any){
     console.log(newDiets);
   };
   return (
-
-
         <div>
             <div>
                 <form onSubmit={search}>
@@ -37,6 +35,7 @@ export default function Diet({diets}:any){
             </div>
 
             <div className='btn-diet-workouts'>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
             <Link href="Diet/breakfast">
             <button className='custom-btn btn-16'>Breakfast</button>
              </Link>
