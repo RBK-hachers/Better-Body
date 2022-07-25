@@ -58,7 +58,7 @@ export default function Diet({diets}:any){
                        <div className="card__content">
                          <div className="card__title">{diet.nameReceipe}</div>
                          <p className="card__text">{diet.description} </p>
-                         <Link href={`Onediet/${diet._id}`}><button className="btn btn--block card__btn">Button</button></Link>
+                         <Link href={`Onediet/${diet._id}`}><button className="btn btn--block card__btn">Show more</button></Link>
                        </div>
                      </div>
                    </li>
