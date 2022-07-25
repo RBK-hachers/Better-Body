@@ -1,5 +1,16 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import quotes from "./data";
 function Profile({user,image,email,log}:any) {
+//show random quote in user profile
+const [random,setRandom]=useState(0)
+useEffect(() => {
+  setRandom(Math.floor(Math.random() * quotes.length-1))
+}, []);
+
+  const showRandomQuote=()=>{
+    setRandom(Math.floor(Math.random() * quotes.length-1))
+  }
   return (
     <div >
 <div className="wrapper">
@@ -15,13 +26,14 @@ function Profile({user,image,email,log}:any) {
     <h3 className="name">Welcome back {user}</h3>
     <p className="title">{email}</p>
     <p className="description"></p>
-    <button type="button" className="btn">Update</button>
+    <button type="button" className="btn" onClick={()=>{return showRandomQuote()}}>Quote</button>
   </div>
   
   <div className="social-icons">
     hello there! we hope that you liked our app so 
-    feel free if you want to update your account
-
+    feel free if you want to update your account this is the quote of today!:
+    
+ {quotes[random]}
 
   
 </div>

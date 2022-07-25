@@ -170,10 +170,7 @@ background-color: red;
 }
 
   
-:focus{
-    outline: 2px solid #0f62fe;
-    outline-offset: -2px;
-}
+
 .formbutton{
   
   display: inline-block;

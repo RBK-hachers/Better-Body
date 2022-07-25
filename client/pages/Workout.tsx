@@ -53,6 +53,7 @@ search
 </div>
 </form>      
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <div className='btn-diet-workouts'>
   <div className="buttons">
     <Link href="Workout/legs">
             <button className="custom-btn btn-16">legs</button>
@@ -69,7 +70,7 @@ search
             <button className="custom-btn btn-16">core</button>
              </Link>
              </div>
-          
+          </div>
             {oldworkouts.sort((a,b)=>a.week-b.week).map((workout:any,index:number)=>(
                 <ul className="cards">
                 <li className="cards__item">
