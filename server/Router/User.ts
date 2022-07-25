@@ -66,7 +66,8 @@ const token=jwt.sign(
  return res.json({userId:user._id,userName:user.name,userEmail:user.email,userImage:user.img,token:token,connected:200})
 
 }else{
-  res.json("nope")
+  console.log("wrong password")
+  return res.json({userId:"",userName:"",userEmail:"",userImage:"",token:"",connected:0})
 
 }
 }) 

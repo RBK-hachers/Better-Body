@@ -225,8 +225,9 @@ margin-left: 13%;
     display: flex;
     margin-top: 1.2em;
     font-size: 25px;
-    padding-left: 250px;
-    padding-top: 50px;
+   margin-left: 290px;
+    text-align: center;
+    width:800px;
   
   }
 }
@@ -254,7 +255,7 @@ $main-height: 6.25rem;
 #container {
   width: $main-width;
   height: $main-height;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 600px;
 }
 
