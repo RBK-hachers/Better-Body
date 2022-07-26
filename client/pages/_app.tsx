@@ -4,6 +4,7 @@ import "../styles/signup.scss";
 import "../styles/searchbar.scss"
 import "../styles/workout.css"
 import "../styles/diet_cards.css"
+import "../styles/recipe.css"
 import Layout from '../component/layout'
 import { useState, useEffect } from "react";
 import Homepage from "./index";
