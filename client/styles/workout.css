@@ -26,6 +26,7 @@
     margin-left: 20px;
     border: none;
     color: #000;
+    
   }
   .btn-16:after {
     position: absolute;
@@ -114,4 +115,76 @@ background-color: white;
   overflow: hidden;
   position: relative;
   transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+}
+.workoutimage:hover {
+  
+  filter: contrast(100%);
+
+}
+.oneworkoutimage:hover{
+  filter: contrast(100%);
+}
+
+.but{
+  margin-top: 10px;
+}
+.Popup{
+  margin-left: 500px;
+  position: absolute;
+  margin-top: 500px;
+  width: 50%;
+  height: 50%;
+  align-content: center;
+  background: url("https://img.freepik.com/photos-premium/interieur-salle-sport-equipements_23-2147949749.jpg?w=996");
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.paymentform{
+ margin: auto;
+}
+.input{
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 14px;
+  vertical-align: baseline;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: .16px;
+  border-radius: 0;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  width: 30%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #8d8d8d;
+  background-color: #f4f4f4;
+  padding: 0 16px;
+  color: #161616;
+  transition: background-color 70ms cubic-bezier(.2,0,.38,.9),outline 70ms cubic-bezier(.2,0,.38,.9);
+  margin-left: 30%;
+  margin-top: 20px;
+}
+.material-symbols-outlined {
+background-color: red;
+}
+
+  
+
+.formbutton{
+  
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: #4299e1;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-bottom: 4px solid #2b6cb0;
+  font-weight: 700;
+  color: white;
+  line-height: 26px;
+margin-top: 30px;
+margin-left: 30%;
 }

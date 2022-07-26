@@ -36,7 +36,7 @@ export default function Blogging({ blogs }: any) {
             <li className="cards__item">
               <div className="blogCards">
                 <div className="card__content">
-                  <h3>blog Author{blog.blogAuthor}</h3>
+                  <h3>blog Author:{blog.blogAuthor}</h3>
                   <div className="card__title">{blog.blogTitle}</div>
                   {/* <img
                     className="card__image card__image--fence"

@@ -1,64 +1,57 @@
 import Image from "next/image";
-function Profile() {
-  const description = "fat";
-  return (
-    <div className="profile">
-      {/* <div className="card">
-        <div className="ds-top"></div>
-        <div className="avatar-holder">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaWPe04ve7gxfEdYYJSI54lNBlQID_tO0bAw&usqp=CAU"
-            alt="img"
-          />
-        </div>
-        <div className="name">
-          <h2>Mr Monkey</h2>
-        </div>
+import { useEffect, useState } from "react";
+import quotes from "./data";
+function Profile({user,image,email,log}:any) {
+//show random quote in user profile
+const [random,setRandom]=useState(0)
+useEffect(() => {
+  setRandom(Math.floor(Math.random() * quotes.length-1))
+}, []);
 
-        <div className="ds-info">
-          <div className="ds pens">
-            <h6 title="height">
-              height <i className="fas fa-edit"></i>
-            </h6>
-            <p>29</p>
-          </div>
-          <div className="ds projects">
-            <h6 title="weight">
-              weight <i className="fas fa-project-diagram"></i>
-            </h6>
-            <p>0</p>
-          </div>
-          <div className="ds posts">
-            <h6 title="Number of posts">
-              Posts <i className="fas fa-comments"></i>
-            </h6>
-            <p>0</p>
-          </div>
-        </div>
-        <div className="ds-skill">
-          <h6>Skill</h6>
-          <div className="skill">
-            <h6>
-              <i className="fab "></i> IMC{" "}
-            </h6>
-            {description === "fat" && (
-              <div className="bar bar-FAT">
-                <p>34</p>
-              </div>
-            )}
-            {description === "normal" && (
-              <div className="bar bar-NORMAL">
-                <p>34</p>
-              </div>
-            )}
-            {description === "under" && (
-              <div className="bar bar-UNDER">
-                <p>34</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </div> */}
+  const showRandomQuote=()=>{
+    setRandom(Math.floor(Math.random() * quotes.length-1))
+  }
+  return (
+    <div >
+<div className="wrapper">
+  <div className="top-icons">
+    <i className="fas fa-long-arrow-alt-left"></i>
+    <i className="fas fa-ellipsis-v"></i>
+    <i className="far fa-heart"></i>
+  </div>
+  
+  <div className="profile">
+    <img src={image} className="thumbnail"></img>
+    <div className="check"><i className="fas fa-check"></i></div>
+    <h3 className="name">Welcome back {user}</h3>
+    <p className="title">{email}</p>
+    <p className="description"></p>
+    <button type="button" className="btn" onClick={()=>{return showRandomQuote()}}>Quote</button>
+  </div>
+  
+  <div className="social-icons">
+    hello there! we hope that you liked our app so 
+    feel free if you want to update your account this is the quote of today!:
+    
+ {quotes[random]}
+
+  
+</div>
+
+<div id="container" onClick={()=>{
+  return log()
+}}>
+  <button className="face-button">
+    <span className="face-container">
+      <span className="eye left"></span>
+      <span className="eye right"></span>
+      <span className="mouth"></span>
+    </span>
+  </button>
+  </div>
+</div>
+
+
     </div>
   );
 }

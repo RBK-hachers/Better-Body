@@ -26,8 +26,6 @@ export default function Diet({diets}:any){
     console.log(newDiets);
   };
   return (
-
-
         <div>
             <div>
                 <form onSubmit={search}>
@@ -36,15 +34,16 @@ export default function Diet({diets}:any){
                 </form>
             </div>
 
-            <div>
+            <div className='btn-diet-workouts'>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
             <Link href="Diet/breakfast">
-            <button>Breakfast</button>
+            <button className='custom-btn btn-16'>Breakfast</button>
              </Link>
              <Link href="Diet/lunch">
-            <button>Lunch</button>
+            <button className='custom-btn btn-16'>Lunch</button>
              </Link>
              <Link href="Diet/dinner">
-            <button>Dinner</button>
+            <button className='custom-btn btn-16'>Dinner</button>
              </Link>
 
             </div>
@@ -59,7 +58,7 @@ export default function Diet({diets}:any){
                        <div className="card__content">
                          <div className="card__title">{diet.nameReceipe}</div>
                          <p className="card__text">{diet.description} </p>
-                         <Link href={`Onediet/${diet._id}`}><button className="btn btn--block card__btn">Button</button></Link>
+                         <Link href={`Onediet/${diet._id}`}><button className="btn btn--block card__btn">Show more</button></Link>
                        </div>
                      </div>
                    </li>

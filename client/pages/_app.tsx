@@ -4,12 +4,14 @@ import "../styles/signup.scss";
 import "../styles/searchbar.scss"
 import "../styles/workout.css"
 import "../styles/diet_cards.css"
+import "../styles/recipe.css"
 import Layout from '../component/layout'
 import { useState, useEffect } from "react";
 import Homepage from "./index";
 import axios from "axios";
-import "../styles/recipe.css"
-
+import "../styles/contact.scss"
+import "../styles/Profile.scss"
+import "../styles/Home.css"
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -19,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 const [name1,setName1] = useState("")
 const [emails1,setEmail1] = useState("")
  const [passwords1,setPassword1] = useState("")
-const [img,setImg1] = useState("")
+const [img1,setImg1] = useState("")
 
  const signup:any= async () =>{
 try{
@@ -29,7 +31,7 @@ try{
         "Accept": "application/json",
         "Content-Type": "application/json"
     },
-    body: JSON.stringify({email:emails1,password:passwords1})
+    body: JSON.stringify({email:emails1,password:passwords1,img:img1,name:name1})
     })
     
 }catch (error) {
@@ -48,15 +50,22 @@ try{
   
     const [curentuser, setCurrentUser] = useState("");
     const [connected, setConnected] = useState(0);
-  
+    const [img,setImg] = useState("")
+    const [email,setEmai] = useState("")
 
 
 
     useEffect(() => {
+      //get current user informations
       let connect: any = localStorage.getItem("connected");
-      const loggedInUser: any = localStorage.getItem("userName");
+      let loggedInUser: any = localStorage.getItem("userName");
+      let useimage: any = localStorage.getItem("userImage");
+      let usereamil: any = localStorage.getItem("userEmail");
+  
       setCurrentUser(loggedInUser);
       setConnected(connect);
+      setImg(useimage)
+      setEmai(usereamil)
     }, []);
   
 
@@ -71,7 +80,9 @@ try{
       localStorage.setItem("userName", res.data.userName);
       localStorage.setItem("userId", res.data.userId);
       localStorage.setItem("connected", res.data.connected);
-      console.log(res);
+      localStorage.setItem("userEmail", res.data.userEmail);
+      localStorage.setItem("userImage", res.data.userImage);
+      console.log(localStorage)
     };
   
     const Logout = () => {
@@ -90,15 +101,9 @@ try{
             <Layout>
 
 {" "}
-<Component {...pageProps} user={curentuser} />
+<Component {...pageProps} user={curentuser} image={img} email={email} log={Logout} />
            </Layout>
-            <button
-              onClick={() => {
-                return Logout();
-              }}
-            >
-              Logout
-            </button>
+        
           </div>
         );
         

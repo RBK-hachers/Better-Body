@@ -9,13 +9,14 @@ export default function Type({workouts}:any){
                 // eslint-disable-next-line react/jsx-key
                 <ul className="cards">
                 <li className="cards__item">
-                 <div className="card ">
+                 <div className="workoutcard ">
                     <h1>week {workout.week}</h1>
-                    <img className="card__image card__image--fence workoutcard" src={workout.img}/>
+                    <img className="workoutimage card__image--fence" src={workout.img}/>
                     <div className="card__content workoutcardcontent">
                       <div className="card__title ">{workout.name}</div>
-                      <p className="card__text">{workout.description} </p>
-                      <Link href={`/oneWorkout/${workout._id}`}><button className="btn btn--block card__btn">Button</button></Link>
+                      <Link href={`/oneWorkout/${workout._id}`}><button className="btn btn--block card__btn">learn more</button></Link>
+                      <Link href="/Workout"><button className="btn btn--block card__btn but">back</button></Link>
+
                     </div>
                   </div>
                 </li>

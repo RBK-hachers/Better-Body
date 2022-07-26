@@ -61,12 +61,13 @@ if (err){
 const isPasswordValid = await bcrypt.compare(password, user.password)
 if (isPasswordValid){
 const token=jwt.sign(
-  {userId:user._id,userName:user.name,userEmail:user.email},'RANDOM_TOKEN_SECRET',{expiresIn:'24h'})
+  {userId:user._id,userName:user.name,userEmail:user.email,userImage:user.img},'RANDOM_TOKEN_SECRET',{expiresIn:'24h'})
 
- return res.json({userId:user._id,userName:user.name,userEmail:user.email,token:token,connected:200})
+ return res.json({userId:user._id,userName:user.name,userEmail:user.email,userImage:user.img,token:token,connected:200})
 
 }else{
-  res.json("nope")
+  console.log("wrong password")
+  return res.json({userId:"",userName:"",userEmail:"",userImage:"",token:"",connected:0})
 
 }
 }) 
