@@ -67,7 +67,9 @@ const token=jwt.sign(
 
 }else{
   console.log("wrong password")
-  return res.json({userId:"",userName:"",userEmail:"",userImage:"",token:"",connected:0})
+  const token=jwt.sign(
+    {userId:"",userName:"",userEmail:"",userImage:"",connected:0},'RANDOM_TOKEN_SECRET',{expiresIn:'24h'})
+  return res.json({userId:"",userName:"",userEmail:"",userImage:"",token:token,connected:0})
 
 }
 }) 
