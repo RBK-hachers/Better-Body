@@ -12,6 +12,7 @@ const Navbar =()=>{
   <li><a href="/Workout">Workout</a></li>
   <li><a href="/Contact">Contact</a></li>
   <li><a href="/Profile">Profile</a></li>
+  <li><a href="/Blogging">Blogging</a></li>
 
 
   </ul>

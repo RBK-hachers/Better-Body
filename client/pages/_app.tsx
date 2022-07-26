@@ -12,7 +12,9 @@ import axios from "axios";
 import "../styles/contact.scss"
 import "../styles/Profile.scss"
 import "../styles/Home.css"
+import "../styles/blog.css"
 import type { AppProps } from "next/app";
+import "../styles/recipe.css"
 
 function MyApp({ Component, pageProps }: AppProps) {
 //signup and login 

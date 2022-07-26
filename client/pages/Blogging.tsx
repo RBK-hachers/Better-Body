@@ -18,17 +18,16 @@ export default function Blogging({ blogs }: any) {
       <div className="addblog">
         <p>
           feel free and create a new blog{" "}
-          <a onClick={() => showForm()} className="here">
-            <i> here </i>
-          </a>
+            <i onClick={()=>setAdd(true)}> here </i>
+     
         </p>
-        {addblog && (
+        {addblog ? (
           <div>
             <br />
-            <Addblog />
+       <Addblog/>
             <br />
           </div>
-        )}
+        ) : null}
       </div>
       {bblogs.map((blog: any, index: number) => (
         <div key={index}>
